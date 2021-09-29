@@ -1,0 +1,14 @@
+
+
+1) Open 'cmd' in project file then run these commands
+For Run:
+
+->  pip install -r requirements.txt
+->  virtu\Scripts\activate
+->  python manage.py runserver
+
+For Admin:
+
+-> python manage.py createsuperuser
+
+2) use "/sakib" at the end of the address to see my portfolio

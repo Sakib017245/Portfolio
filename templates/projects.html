@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<main id="main">
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+<div class="row">
+
+  {% for i in project %}        
+       <div class="col col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{{i.project_image.url}}" alt="Card image cap">
+          <div class="card-body">
+            <h3>{{i.project_title}}</h3>
+            <p class="card-text">{{ i.project_description|truncatechars:50 }}  <a href="{% url 'project_details' i.id %}"> details </a> </p>
+          </div>
+        </div>
+      
+       </div>
+{% endfor %}
+
+</div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+  </main><!-- End #main -->
+{% endblock %}
